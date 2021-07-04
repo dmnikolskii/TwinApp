@@ -1,0 +1,46 @@
+.reg_label {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 32px;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.carousel_button {
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    margin: 0px 4px 10px 4px;
+    justify-content: center;
+    border-radius: 0px;
+    border: 0px solid rgba(255, 255, 255, 0.15);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    background-color: #4D4949;
+
+    -webkit-box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.25) ;
+    box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.25) ;
+    
+    max-width: 100px;
+    width: 100px;
+    flex: 1 1 0;
+}
+
+.carousel_button:hover {
+    cursor: pointer;
+    background-color : rgba(255, 255, 255, 0.04);
+}
+
+.separator_line1 {
+    height:1px;
+    margin: 20 auto 20 auto;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+}
