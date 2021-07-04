@@ -30,7 +30,6 @@ function LoginModal({onModalClose}) {
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
-            console.log("!!!!!!!!!")
             checkAuth(login, password);
         }
       }
@@ -43,7 +42,7 @@ function LoginModal({onModalClose}) {
                         <p className="reg_label">{message}</p>
                         <input value={login} className="input_field" placeholder="Login" onChange={(e)=>{setLogin(e.target.value);}} onKeyDown={handleKeyDown}></input>
                         <input value={password} type="password" className="input_field" placeholder="Password" onChange={(e)=>{setPassword(e.target.value);}} onKeyDown={handleKeyDown}></input>
-                        <button className="input_field margin_top30 reg_label red_background" onClick={(e)=>{checkAuth(login, password)}}>LOGIN</button>
+                        <button className="input_field margin_top30 reg_label red_background spacer" onClick={(e)=>{checkAuth(login, password)}}>LOGIN</button>
                 </div>            
             </div>
         </div>

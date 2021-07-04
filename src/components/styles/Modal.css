@@ -50,7 +50,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 20vw;
     padding-bottom: 30px;
     min-width: 502px;
     max-width: 502px;
@@ -67,6 +67,10 @@
     -webkit-animation: scaler 0.2s linear;
 }
 
+.spacer {
+    letter-spacing: .08em;
+}
+
 @media (orientation: portrait) {
     .modalBackground {
         min-height: 5000px;
@@ -75,8 +79,9 @@
     }
 
     .modalContainer {
-        top: 40vh;
+        top: 25vh;
         margin: auto;
+        min-width: 75vw;
 }
 }
 
