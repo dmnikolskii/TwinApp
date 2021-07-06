@@ -3,9 +3,13 @@ import LinePicker from './LinePicker'
 import { Fragment } from 'react';
 
 import CarouselButton from './CarouselButton'
+import LinkButton from './LinkButton'
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+
+import { ReactComponent as GaugeLogo } from "../svg/gauge.svg"
+import { ReactComponent as GraphLogo } from "../svg/graph.svg"
 
 function TwinWatchPage() {
 
@@ -64,6 +68,12 @@ function TwinWatchPage() {
 
             <div className="separator_line1"></div>
 
+            <div className="LinkContainer">
+                <LinkButton caption="Line Performance Andon Dashboard" icon={GaugeLogo}/>
+                <LinkButton caption="Process Parameters Analysis Dashboard" icon={GraphLogo}/>
+                <LinkButton caption="Vibration Analysis Dashboard" icon={GraphLogo}/>
+                <LinkButton caption="Fault Analisys Dashboard" icon={GraphLogo}/>
+            </div>
         </Fragment>
     )
 }

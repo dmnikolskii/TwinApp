@@ -22,8 +22,13 @@ function LoginModal({onModalClose, showBackground, setSuperviser}) {
         console.log("LOGIN: " + login);
         console.log("PASSWORD: " + pass);
         if (login === "cci" && pass === "cci") {
-            onModalClose(false);
             setSuperviser(false);
+            console.log("Regular mode");
+            onModalClose(false);
+        } else if (login === "admin" && pass === "admin") {
+            setSuperviser(true);
+            console.log("Admin mode");
+            onModalClose(false);
         } else {
             setMessage("Invalid login or password!"); 
         }
