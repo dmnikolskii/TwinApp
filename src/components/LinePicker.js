@@ -16,32 +16,38 @@ function LinePicker() {
     const [selectedOption, setSelectedOption] = useState("");
     const [highlightedOption, setHighlightedOption] = useState("");
   
+    console.log(selectedOption);
+    console.log(highlightedOption);
+    
     const countries = [
-        "Turkey",
-        "Kazakhstan",
-        "Pakistan",
         "Azerbaijan",
-        "Turkmenistan",
-        "Kyrgyzstan",
-        "Iraq",
-        "Uzbekistan",
         "Jordan",
-        "Tajikistan"
-      ];
-    
-      const cities = [
-        "Turkey",
         "Kazakhstan",
-        "Pakistan",
-        "Azerbaijan",
-        "Turkmenistan",
         "Kyrgyzstan",
-        "Iraq",
-        "Uzbekistan",
-        "Jordan",
-        "Tajikistan"
+        "North Iraq",
+        "Pakistan",
+        "South Iraq",
+        "Tajikistan",
+        "Turkey",
+        "Turkmenistan",
+        "Uzbekistan"
       ];
-    
+
+      const cities={ 
+        "Azerbaijan":["Baku"], 
+        "Jordan":["Madaba"], 
+        "Kazakhstan":["Burunday", "Astana"],
+        "Kyrgyzstan":["Bishkek"],
+        "North Iraq":["Erbil"],
+        "Pakistan":["Lahore", "Gujranwala", "Faisalabad", "Multan", "Karachi", "RYK"],
+        "South Iraq":["Karbala", "Hilla"],
+        "Tajikistan":["Dushanbe"],
+        "Turkey":["Chorlu", "Bursa", "Mersin", "Elazig", "Ankara", "Izmir", "Koycegiz", "Isparta", "Sapanca", "Hazar"],
+        "Turkmenistan":["Ashkabat"],
+        "Uzbekistan":["plant1", "plant2", "plant3"],
+   };
+
+   
       const lines = [
         "Turkey",
         "Kazakhstan",

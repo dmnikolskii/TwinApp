@@ -2,31 +2,22 @@ import React from 'react'
 import './styles/index.css'
 import {useState} from 'react'
 
-function LoginModal({onModalClose, showBackground, setSuperviser}) {
+function LoginModal({onModalClose, showBackground, setSupervisor}) {
 
     const [message, setMessage] = useState("");
 
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
     
-
-    function handleLoginChange (e) {
-        login = e.target.value;
-    }
-
-    function handlePasswordChange (e) {
-        password = e.target.value;
-    }
-
     function checkAuth (login, pass) {
         console.log("LOGIN: " + login);
         console.log("PASSWORD: " + pass);
         if (login === "cci" && pass === "cci") {
-            setSuperviser(false);
+            setSupervisor(false);
             console.log("Regular mode");
             onModalClose(false);
         } else if (login === "admin" && pass === "admin") {
-            setSuperviser(true);
+            setSupervisor(true);
             console.log("Admin mode");
             onModalClose(false);
         } else {

@@ -8,13 +8,14 @@ function App() {
 
     const [isBackground, setBackground] = useState(true);
     const [showLoginModal, setshowLoginModal] = useState(true);
-    const [isSuperviser, setSuperviser] = useState(false);
+    const [isSupervisor, setSupervisor] = useState(false);
 
+    console.log(isSupervisor);
     return (
     <>
 
         {showLoginModal && <LoginModal onModalClose={setshowLoginModal} showBackground={isBackground}
-                                        setSuperviser={setSuperviser}/>}
+                                        setSupervisor={setSupervisor}/>}
 
         <MainPage onModalClose={setshowLoginModal} setBackground={setBackground}/>
     </>

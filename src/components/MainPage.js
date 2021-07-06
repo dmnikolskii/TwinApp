@@ -49,7 +49,7 @@ function MainPage({onModalClose, setBackground}) {
 
                 <div className='side_button' onClick={()=>{setBackground(true); onModalClose(true);}}>
                     <Unlock fill='white' className="button_ico"/>
-                    <p className="reg_label margin-left0">Administrate</p>
+                    <p className="reg_label margin-left0">Admin</p>
                 </div>
             </div>
 
