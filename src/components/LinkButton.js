@@ -1,10 +1,17 @@
 import React from 'react'
+import { Fragment } from 'react'
+import "./styles/LinkButton.css"
 
-function LinkButton() {
+// import { ReactComponent as GraphLogo } from "../svg/graph.svg"
+
+function LinkButton({caption, Icon}) {
     return (
-        <div>
-            
-        </div>
+        <Fragment>
+            <div className="link_button reg_label">
+                <Icon fill="white" className="button_ico"/>
+                {caption}
+            </div>    
+        </Fragment>
     )
 }
 

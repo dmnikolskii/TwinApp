@@ -63,17 +63,18 @@ function TwinWatchPage() {
                     <div>
                         <CarouselButton caption="Stretcher"/>
                     </div>
-                </Carousel>;            
+                </Carousel>           
             </div>
 
             <div className="separator_line1"></div>
 
-            <div className="LinkContainer">
-                <LinkButton caption="Line Performance Andon Dashboard" icon={GaugeLogo}/>
-                <LinkButton caption="Process Parameters Analysis Dashboard" icon={GraphLogo}/>
-                <LinkButton caption="Vibration Analysis Dashboard" icon={GraphLogo}/>
-                <LinkButton caption="Fault Analisys Dashboard" icon={GraphLogo}/>
+            <div className="link_container">
+                <LinkButton caption="Line Performance Andon Dashboard" Icon={GaugeLogo}/>
+                <LinkButton caption="Process Parameters Analysis Dashboard" Icon={GraphLogo}/>
+                <LinkButton caption="Vibration Analysis Dashboard" Icon={GraphLogo}/>
+                <LinkButton caption="Fault Analisys Dashboard" Icon={GraphLogo}/>
             </div>
+
         </Fragment>
     )
 }
