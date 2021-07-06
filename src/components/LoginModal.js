@@ -2,7 +2,7 @@ import React from 'react'
 import './styles/index.css'
 import {useState} from 'react'
 
-function LoginModal({onModalClose}) {
+function LoginModal({onModalClose, showBackground, setSuperviser}) {
 
     const [message, setMessage] = useState("");
 
@@ -23,6 +23,7 @@ function LoginModal({onModalClose}) {
         console.log("PASSWORD: " + pass);
         if (login === "cci" && pass === "cci") {
             onModalClose(false);
+            setSuperviser(false);
         } else {
             setMessage("Invalid login or password!"); 
         }
@@ -36,7 +37,7 @@ function LoginModal({onModalClose}) {
     
     return (
         <div>
-            <div className="modalBackground black_background">
+            <div className= 'modalBackground black_background'>
                 <div className="modalContainer">
                 <div className="reg_label label_bold label32 padding32">LOGIN</div>
                         <p className="reg_label">{message}</p>
