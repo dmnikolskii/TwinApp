@@ -3,6 +3,8 @@ import { useState } from 'react';
 import './styles/Modal.css';
 import './styles/index.css'
 import './styles/MainPage.css';
+import { useMediaQuery } from "react-responsive";
+
 // import logo from "../images/CCI_Logo.png";
 import { ReactComponent as Logo } from "../svg/logo.svg"
 import { ReactComponent as TwinWatch } from "../svg/gain.svg"
@@ -19,6 +21,9 @@ import OperationPage from './OperationPage';
 function MainPage({onModalClose, setBackground, isSupervisor}) {
     const [curPageID, setCurPageID] = useState(1);
 
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1100px) and (min-height: 500px)' }) ;
+    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
+    
     return (
         <div className="main_page_grid_background">
             <div className="side_bar" onClick={(e)=>{if(e.target.getAttribute('class') === "side_bar") setCurPageID(0);}}>
@@ -29,25 +34,25 @@ function MainPage({onModalClose, setBackground, isSupervisor}) {
                 <div className="separator_line"></div>
 
                 <div className={curPageID === 1 ? 'side_button active': 'side_button'} onClick={()=>{setCurPageID(1);}}>
-                    {curPageID === 1 ? <Fragment><b></b><b></b></Fragment>:""}
+                    {!(isTabletOrMobile || isPortrait) && curPageID === 1 ? <Fragment><b></b><b></b></Fragment>:""}
                     <TwinWatch fill='white' className="button_ico"/>
                     <p className="reg_label margin-left0">TwinWatch</p>
                 </div>
 
                 <div className={curPageID === 2 ? 'side_button active': 'side_button'} onClick={()=>{setCurPageID(2)}}>
-                    {curPageID === 2 ? <Fragment><b></b><b></b></Fragment>:""}
+                    {!(isTabletOrMobile || isPortrait) && curPageID === 2 ? <Fragment><b></b><b></b></Fragment>:""}
                     <TwinSense fill='white' className="button_ico"/>
                     <p className="reg_label margin-left0">TwinSense</p>
                 </div>
 
                 <div className={curPageID === 3 ? 'side_button active': 'side_button'} onClick={()=>{setCurPageID(3)}}>
-                    {curPageID === 3 ? <Fragment><b></b><b></b></Fragment>:""}
+                    {!(isTabletOrMobile || isPortrait) && curPageID === 3 ? <Fragment><b></b><b></b></Fragment>:""}
                     <TwinSight fill='white' className="button_ico"/>
                     <p className="reg_label margin-left0">TwinSight</p>
                 </div>
 
                 <div className={curPageID === 4 ? 'side_button active': 'side_button'} onClick={()=>{setCurPageID(4)}}>
-                    {curPageID === 4 ? <Fragment><b></b><b></b></Fragment>:""}
+                    {!(isTabletOrMobile || isPortrait) && curPageID === 4 ? <Fragment><b></b><b></b></Fragment>:""}
                     <Operation fill='white' className="button_ico"/>
                     <p className="reg_label margin-left0">Operation</p>
                 </div>
