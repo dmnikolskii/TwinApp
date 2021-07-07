@@ -36,25 +36,25 @@ function MainPage({onModalClose, setBackground, isSupervisor}) {
                 <div className={curPageID === 1 ? 'side_button active': 'side_button'} onClick={()=>{setCurPageID(1);}}>
                     {!(isTabletOrMobile || isPortrait) && curPageID === 1 ? <Fragment><b></b><b></b></Fragment>:""}
                     <TwinWatch fill='white' className="button_ico"/>
-                    <p className="reg_label margin-left0">TwinWatch</p>
+                    <p className="reg_label margin-left0">{!(isTabletOrMobile || isPortrait) ? "TwinWatch" : ""}</p>
                 </div>
 
                 <div className={curPageID === 2 ? 'side_button active': 'side_button'} onClick={()=>{setCurPageID(2)}}>
                     {!(isTabletOrMobile || isPortrait) && curPageID === 2 ? <Fragment><b></b><b></b></Fragment>:""}
                     <TwinSense fill='white' className="button_ico"/>
-                    <p className="reg_label margin-left0">TwinSense</p>
+                    <p className="reg_label margin-left0">{!(isTabletOrMobile || isPortrait) ? "TwinSense" : ""}</p>
                 </div>
 
                 <div className={curPageID === 3 ? 'side_button active': 'side_button'} onClick={()=>{setCurPageID(3)}}>
                     {!(isTabletOrMobile || isPortrait) && curPageID === 3 ? <Fragment><b></b><b></b></Fragment>:""}
                     <TwinSight fill='white' className="button_ico"/>
-                    <p className="reg_label margin-left0">TwinSight</p>
+                    <p className="reg_label margin-left0">{!(isTabletOrMobile || isPortrait) ? "TwinSight" : ""}</p>
                 </div>
 
                 <div className={curPageID === 4 ? 'side_button active': 'side_button'} onClick={()=>{setCurPageID(4)}}>
                     {!(isTabletOrMobile || isPortrait) && curPageID === 4 ? <Fragment><b></b><b></b></Fragment>:""}
                     <Operation fill='white' className="button_ico"/>
-                    <p className="reg_label margin-left0">Operation</p>
+                    <p className="reg_label margin-left0">{!(isTabletOrMobile || isPortrait) ? "Operation" : ""}</p>
                 </div>
 
                 <div className='side_button' onClick={()=>{setBackground(true); onModalClose(true);}}>
@@ -62,7 +62,7 @@ function MainPage({onModalClose, setBackground, isSupervisor}) {
                     <Unlock fill='white' className="button_ico"/> :
                     <Lock fill='white' className="button_ico"/>}
                     
-                    <p className="reg_label margin-left0">{isSupervisor ? 'Admin' : 'User'}</p>
+                    <p className="reg_label margin-left0">{!(isTabletOrMobile || isPortrait) ? isSupervisor ? 'Admin' : 'User' : ""}</p>
                 </div>
             </div>
 
