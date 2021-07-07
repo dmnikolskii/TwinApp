@@ -10,12 +10,13 @@ import { ReactComponent as TwinSense } from "../svg/bars.svg"
 import { ReactComponent as TwinSight } from "../svg/siren.svg"
 import { ReactComponent as Operation } from "../svg/gears.svg"
 import { ReactComponent as Unlock } from "../svg/unlock.svg"
+import { ReactComponent as Lock } from "../svg/lock.svg"
 
 import TwinWatchPage from './TwinWatchPage';
 import TwinSensePage from './TwinSensePage';
 import OperationPage from './OperationPage';
 
-function MainPage({onModalClose, setBackground}) {
+function MainPage({onModalClose, setBackground, isSupervisor}) {
     const [curPageID, setCurPageID] = useState(1);
 
     return (
@@ -48,8 +49,11 @@ function MainPage({onModalClose, setBackground}) {
                 </div>
 
                 <div className='side_button' onClick={()=>{setBackground(true); onModalClose(true);}}>
-                    <Unlock fill='white' className="button_ico"/>
-                    <p className="reg_label margin-left0">Admin</p>
+                    {isSupervisor ? 
+                    <Unlock fill='white' className="button_ico"/> :
+                    <Lock fill='white' className="button_ico"/>}
+                    
+                    <p className="reg_label margin-left0">{isSupervisor ? 'Admin' : 'User'}</p>
                 </div>
             </div>
 

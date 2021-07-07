@@ -15,7 +15,10 @@ function LinePicker() {
 
     const [selectedOption, setSelectedOption] = useState("");
     const [highlightedOption, setHighlightedOption] = useState("");
-  
+
+    const [country, setCountry] = useState("");
+    const [city, setCity] = useState("");
+
     console.log(selectedOption);
     console.log(highlightedOption);
     
@@ -44,7 +47,7 @@ function LinePicker() {
         "Tajikistan":["Dushanbe"],
         "Turkey":["Chorlu", "Bursa", "Mersin", "Elazig", "Ankara", "Izmir", "Koycegiz", "Isparta", "Sapanca", "Hazar"],
         "Turkmenistan":["Ashkabat"],
-        "Uzbekistan":["plant1", "plant2", "plant3"],
+        "Uzbekistan":["plant1", "plant2", "plant3"]
    };
 
    
@@ -78,13 +81,13 @@ function LinePicker() {
                         maxHeight: "30px" 
                         }}
                     focusColor="rgba(196, 196, 196, 0.24)"
-                    onSelect={(option) => setSelectedOption(option)}
+                    onSelect={(option) => setCountry(option)}
                     onChange={(event) => console.log(event.target.value)}
                     enableAutocomplete
                     onOptionsChange={(option) => setHighlightedOption(option)}
                 />            
                 <ComboBox
-                    options={cities}
+                    options={cities.Azerbaijan}
                     placeholder="plant"
                     defaultIndex={4}
                     optionsListMaxHeight={200}

@@ -17,7 +17,7 @@ function App() {
         {showLoginModal && <LoginModal onModalClose={setshowLoginModal} showBackground={isBackground}
                                         setSupervisor={setSupervisor}/>}
 
-        <MainPage onModalClose={setshowLoginModal} setBackground={setBackground}/>
+        <MainPage onModalClose={setshowLoginModal} setBackground={setBackground} isSupervisor={isSupervisor}/>
     </>
     );
 }
